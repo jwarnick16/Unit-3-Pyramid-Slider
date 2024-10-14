@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        h1 {
+            margin: auto;
+            width: 500px;
+            padding: 40px;
+            box-sizing: border-box;
+            text-align: center;
+            color: black;
+            background-color: rgb(137, 137, 175);
+            border: solid;
+            border-radius: 5px;
+            font-size: 24pt;
+            font-weight: bold;
+            font-family: "Lucida Console", "Courier New", monospace;
+        
+        }
+        .form-inline {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            border: solid;
+            border-radius: 5px;
+            font-family: "Lucida Console", "Courier New", monospace;
+        }
+
+        .form-inline label {
+            margin: 5px 10px 5px 0;
+        }
+
+        .form-inline input{
+            vertical-align: middle;
+            margin: 5px 10px 5px 0;
+            padding: 10px;
+            background-color: lightgray;
+            border: 1px solid black;
+        }
+
+        .form-inline button {
+            padding: 10px 20px;
+            background-color: darkgray;
+            border: 1px solid black;
+            color: white;
+        }
+
+        #pyramidSlider, #symbolSelect {
+            margin: auto;
+            width: 500px;
+            padding: 5px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        #pyramid {
+            margin: auto;
+            width: 500px;
+            padding: 40px;
+            box-sizing: border-box;
+            text-align: center;
+            color: black;
+            border: solid;
+            border-radius: 5px;
+            font-size: 16pt;
+            font-weight: bold;
+            font-family: "Lucida Console", "Courier New", monospace;
+            white-space: pre;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pyramid Slide</h1>
+
+    <div class="form-inline">
+    <form id="symbolSelect">
+    <label for="input">Brick Symbol:</label>
+    <select name="input" id="input">
+        <option value="#">#</option>
+        <option value="@">@</option>
+        <option value="X">X</option>
+        <option value="$">$</option>
+    </select>
+    </form>
+    <form id="pyramidSlider">
+        <label for="slider">How high? </label>
+        <input type="range" id="pHeight" name="slider" min="3" max="20">
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+
+    <br><br>
+    <br><br>
+
+    <div id="pyramid"></div>
+
+    <script src="slider.js"></script>
+</body>
+
+</html>
